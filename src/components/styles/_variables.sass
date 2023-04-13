@@ -1,0 +1,632 @@
+$color-light-primary-primary: #4ba5ec
+$color-light-primary-on-primary: #ffffff
+$color-light-primary-primary-container: #d8ecfb
+$color-light-primary-on-primary-container: #06253c
+$color-light-secondary-secondary: #51606f
+$color-light-secondary-on-secondary: #ffffff
+$color-light-secondary-secondary-container: #d5e4f7
+$color-light-secondary-on-secondary-container: #0e1d2a
+$color-light-tertiary-tertiary: #851ce1
+$color-light-tertiary-on-tertiary: #ffffff
+$color-light-tertiary-tertiary-container: #efdbff
+$color-light-tertiary-on-tertiary-container: #2b0052
+$color-primary-100: #ffffff
+$color-primary-99: #fcfcff
+$color-primary-98: #f7f9ff
+$color-primary-95: #e8f2ff
+$color-primary-90: #cee5ff
+$color-primary-80: #96ccff
+$color-primary-70: #5ab2f9
+$color-primary-60: #3997dd
+$color-primary-50: #007dc1
+$color-primary-40: #4ba5ec
+$color-primary-35: #005688
+$color-primary-30: #004a76
+$color-primary-25: #003e64
+$color-primary-20: #003353
+$color-primary-10: #001d33
+$color-primary-0: #000000
+$color-secondary-100: #ffffff
+$color-secondary-99: #fcfcff
+$color-secondary-98: #f7f9ff
+$color-secondary-95: #e8f2ff
+$color-secondary-90: #d5e4f7
+$color-secondary-80: #b9c8da
+$color-secondary-70: #9eadbe
+$color-secondary-60: #8392a3
+$color-secondary-50: #6a7989
+$color-secondary-40: #51606f
+$color-secondary-35: #455463
+$color-secondary-30: #3a4857
+$color-secondary-25: #2e3d4b
+$color-secondary-20: #233240
+$color-secondary-10: #0e1d2a
+$color-secondary-0: #000000
+$color-tretiary-100: #ffffff
+$color-tretiary-99: #fffbff
+$color-tretiary-98: #fff7ff
+$color-tretiary-95: #f9ecff
+$color-tretiary-90: #efdbff
+$color-tretiary-80: #dcb8ff
+$color-tretiary-70: #c894ff
+$color-tretiary-60: #b46eff
+$color-tretiary-50: #a043fb
+$color-tretiary-40: #851ce1
+$color-tretiary-35: #7700d0
+$color-tretiary-30: #6700b5
+$color-tretiary-25: #57009b
+$color-tretiary-20: #480082
+$color-tretiary-10: #2b0052
+$color-tretiary-0: #000000
+$color-main-primary: #3478c5
+$color-main-dark: #15304a
+$color-main-sky-blue: #4ba5eb
+$color-main-yellow: #f9da5b
+$color-main-white: #ffffff
+$color-old-absolute-white: #ffffff
+$color-old-main-bg: #fefefe
+$color-old-light-gray: #d8d7d7
+$color-old-blue-gray: #6e738a
+$color-old-gray: #4d4d4d
+$color-old-text: #2a2f48
+$color-old-blue: #ecf5ff
+$color-old-deep-blue: #b6d7ff
+$color-old-button: #0060d0
+$color-old-gradient: linear-gradient(to bottom, #93cbff 0%,#8893f9 100%)
+$color-old-хз: conic-gradient(#3ae180 0%,#3ae1b3 16.14%,#513ae1 16.15%,#3ae180 100%)
+$color-old-red: #e81414
+$color-old-green: #18bc46
+$color-old-profile-menu-bg: #f3f7ff
+
+/* Use on large screens for short, important text */
+@mixin text-style-display-large() 
+	font-size: 57px
+	font-family: "Gotham Pro"
+	font-weight: 400
+	font-style: normal
+	line-height: 64px
+	text-decoration: none
+	text-transform: none
+
+
+/* Use on large screens for short, important text */
+@mixin text-style-display-medium() 
+	font-size: 45px
+	font-family: "Gotham Pro"
+	font-weight: 400
+	font-style: normal
+	line-height: 52px
+	text-decoration: none
+	text-transform: none
+
+
+/* Use on large screens for short, important text */
+@mixin text-style-display-small() 
+	font-size: 36px
+	font-family: "Gotham Pro"
+	font-weight: 400
+	font-style: normal
+	line-height: 52px
+	text-decoration: none
+	text-transform: none
+
+
+/* Use on smaller screens for short, important text */
+@mixin text-style-headline-large() 
+	font-size: 32px
+	font-family: "Gotham Pro"
+	font-weight: 400
+	font-style: normal
+	line-height: 48px
+	text-decoration: none
+	text-transform: none
+
+
+/* Use on smaller screens for short, important text */
+@mixin text-style-headline-medium() 
+	font-size: 28px
+	font-family: "Gotham Pro"
+	font-weight: 400
+	font-style: normal
+	line-height: 44px
+	text-decoration: none
+	text-transform: none
+
+
+/* Use on smaller screens for short, important text */
+@mixin text-style-headline-small() 
+	font-size: 24px
+	font-family: "Gotham Pro"
+	font-weight: 400
+	font-style: normal
+	line-height: 36px
+	text-decoration: none
+	text-transform: none
+
+
+/* Use for medium-emphasis  relatively short text */
+@mixin text-style-title-large() 
+	font-size: 22px
+	font-family: "Gotham Pro"
+	font-weight: 500
+	font-style: normal
+	line-height: 32px
+	text-decoration: none
+	text-transform: none
+
+
+/* Use for medium-emphasis  relatively short text */
+@mixin text-style-title-medium() 
+	font-size: 16px
+	font-family: "Gotham Pro"
+	font-weight: 500
+	font-style: normal
+	line-height: 24px
+	text-decoration: none
+	text-transform: none
+
+
+/* Use for medium-emphasis  relatively short text */
+@mixin text-style-title-small() 
+	font-size: 14px
+	font-family: "Gotham Pro"
+	font-weight: 500
+	font-style: normal
+	line-height: 20px
+	text-decoration: none
+	text-transform: none
+
+
+/* Use for longer passages of text */
+@mixin text-style-body-large-regular() 
+	font-size: 16px
+	font-family: "Gotham Pro"
+	font-weight: 400
+	font-style: normal
+	line-height: 24px
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-body-large-medium() 
+	font-size: 16px
+	font-family: "Gotham Pro"
+	font-weight: 500
+	font-style: normal
+	line-height: 24px
+	text-decoration: none
+	text-transform: none
+
+
+/* Use for longer passages of text */
+@mixin text-style-body-medium-regular() 
+	font-size: 14px
+	font-family: "Gotham Pro"
+	font-weight: 400
+	font-style: normal
+	line-height: 20px
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-body-medium-medium() 
+	font-size: 14px
+	font-family: "Gotham Pro"
+	font-weight: 500
+	font-style: normal
+	line-height: 20px
+	text-decoration: none
+	text-transform: none
+
+
+/* Use for longer passages of text */
+@mixin text-style-body-small-regular() 
+	font-size: 12px
+	font-family: "Gotham Pro"
+	font-weight: 400
+	font-style: normal
+	line-height: 16px
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-body-small-medium() 
+	font-size: 12px
+	font-family: "Gotham Pro"
+	font-weight: 500
+	font-style: normal
+	line-height: 16px
+	text-decoration: none
+	text-transform: none
+
+
+/* Use for the text inside components or for very small text in the content body */
+@mixin text-style-label-large() 
+	font-size: 14px
+	font-family: "Gotham Pro"
+	font-weight: 500
+	font-style: normal
+	line-height: 20px
+	text-decoration: none
+	text-transform: none
+
+
+/* Use for the text inside components or for very small text in the content body */
+@mixin text-style-label-medium() 
+	font-size: 12px
+	font-family: "Gotham Pro"
+	font-weight: 500
+	font-style: normal
+	line-height: 16px
+	text-decoration: none
+	text-transform: none
+
+
+/* Use for the text inside components or for very small text in the content body */
+@mixin text-style-label-small() 
+	font-size: 11px
+	font-family: "Gotham Pro"
+	font-weight: 500
+	font-style: normal
+	line-height: 16px
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-light-14() 
+	font-size: 14px
+	font-family: "Inter"
+	font-weight: 300
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-regular-12() 
+	font-size: 12px
+	font-family: "Inter"
+	font-weight: 400
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-regular-14() 
+	font-size: 14px
+	font-family: "Inter"
+	font-weight: 400
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-regular-16() 
+	font-size: 16px
+	font-family: "Inter"
+	font-weight: 400
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-regular-17() 
+	font-size: 17px
+	font-family: "Inter"
+	font-weight: 400
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-regular-18() 
+	font-size: 18px
+	font-family: "Inter"
+	font-weight: 400
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-regular-20() 
+	font-size: 20px
+	font-family: "Inter"
+	font-weight: 400
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-regular-24() 
+	font-size: 24px
+	font-family: "Inter"
+	font-weight: 400
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-regular-28() 
+	font-size: 28px
+	font-family: "Inter"
+	font-weight: 400
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-medium-14() 
+	font-size: 14px
+	font-family: "Inter"
+	font-weight: 500
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-medium-16() 
+	font-size: 16px
+	font-family: "Inter"
+	font-weight: 500
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-medium-18() 
+	font-size: 18px
+	font-family: "Inter"
+	font-weight: 500
+	font-style: normal
+	text-decoration: none
+	text-transform: uppercase
+
+@mixin text-style-old-medium-24() 
+	font-size: 24px
+	font-family: "Inter"
+	font-weight: 500
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-semibold-12() 
+	font-size: 12px
+	font-family: "Inter"
+	font-weight: 700
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-semibold-16() 
+	font-size: 16px
+	font-family: "Inter"
+	font-weight: 700
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-semibold-18() 
+	font-size: 18px
+	font-family: "Inter"
+	font-weight: 700
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-semibold-20() 
+	font-size: 20px
+	font-family: "Inter"
+	font-weight: 700
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-semibold-24() 
+	font-size: 24px
+	font-family: "Inter"
+	font-weight: 700
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-semibold-28() 
+	font-size: 28px
+	font-family: "Inter"
+	font-weight: 700
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-semibold-36() 
+	font-size: 36px
+	font-family: "Inter"
+	font-weight: 700
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: uppercase
+
+@mixin text-style-old-bold-16() 
+	font-size: 16px
+	font-family: "Inter"
+	font-weight: 700
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-bold-18() 
+	font-size: 18px
+	font-family: "Inter"
+	font-weight: 700
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-bold-20() 
+	font-size: 20px
+	font-family: "Inter"
+	font-weight: 700
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-bold-24() 
+	font-size: 24px
+	font-family: "Inter"
+	font-weight: 700
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-bold-32() 
+	font-size: 32px
+	font-family: "Inter"
+	font-weight: 700
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-bold-36() 
+	font-size: 36px
+	font-family: "Inter"
+	font-weight: 700
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-bold-48() 
+	font-size: 48px
+	font-family: "Inter"
+	font-weight: 700
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin text-style-old-bold-96() 
+	font-size: 96px
+	font-family: "Inter"
+	font-weight: 700
+	font-style: normal
+	line-height: 140%
+	text-decoration: none
+	text-transform: none
+
+@mixin effect-style-красный() 
+	box-shadow: 0px 10px 30px #ee556a
+
+@mixin effect-style-shadow-lang-switch() 
+	box-shadow: 0px 96px 27px #c4c5dd, 0px 62px 25px #c4c5dd, 0px 35px 21px #c4c5dd, 0px 15px 15px #c4c5dd, 0px 4px 8px #c4c5dd, 0px 0px 0px #c4c5dd
+
+@mixin effect-style-shadow-lang-switch() 
+	box-shadow: 0px 96px 27px #c4c5dd, 0px 62px 25px #c4c5dd, 0px 35px 21px #c4c5dd, 0px 15px 15px #c4c5dd, 0px 4px 8px #c4c5dd, 0px 0px 0px #c4c5dd
+
+@mixin effect-style-shadow-lang-switch() 
+	box-shadow: 0px 96px 27px #c4c5dd, 0px 62px 25px #c4c5dd, 0px 35px 21px #c4c5dd, 0px 15px 15px #c4c5dd, 0px 4px 8px #c4c5dd, 0px 0px 0px #c4c5dd
+
+@mixin effect-style-shadow-lang-switch() 
+	box-shadow: 0px 96px 27px #c4c5dd, 0px 62px 25px #c4c5dd, 0px 35px 21px #c4c5dd, 0px 15px 15px #c4c5dd, 0px 4px 8px #c4c5dd, 0px 0px 0px #c4c5dd
+
+@mixin effect-style-shadow-lang-switch() 
+	box-shadow: 0px 96px 27px #c4c5dd, 0px 62px 25px #c4c5dd, 0px 35px 21px #c4c5dd, 0px 15px 15px #c4c5dd, 0px 4px 8px #c4c5dd, 0px 0px 0px #c4c5dd
+
+@mixin effect-style-shadow-lang-switch() 
+	box-shadow: 0px 96px 27px #c4c5dd, 0px 62px 25px #c4c5dd, 0px 35px 21px #c4c5dd, 0px 15px 15px #c4c5dd, 0px 4px 8px #c4c5dd, 0px 0px 0px #c4c5dd
+
+@mixin effect-style-shadow-book-call() 
+	box-shadow: 0px 96px 27px #70aefe, 0px 62px 25px #70aefe, 0px 35px 21px #70aefe, 0px 15px 15px #70aefe, 0px 4px 8px #70aefe, 0px 0px 0px #70aefe
+
+@mixin effect-style-shadow-book-call() 
+	box-shadow: 0px 96px 27px #70aefe, 0px 62px 25px #70aefe, 0px 35px 21px #70aefe, 0px 15px 15px #70aefe, 0px 4px 8px #70aefe, 0px 0px 0px #70aefe
+
+@mixin effect-style-shadow-book-call() 
+	box-shadow: 0px 96px 27px #70aefe, 0px 62px 25px #70aefe, 0px 35px 21px #70aefe, 0px 15px 15px #70aefe, 0px 4px 8px #70aefe, 0px 0px 0px #70aefe
+
+@mixin effect-style-shadow-book-call() 
+	box-shadow: 0px 96px 27px #70aefe, 0px 62px 25px #70aefe, 0px 35px 21px #70aefe, 0px 15px 15px #70aefe, 0px 4px 8px #70aefe, 0px 0px 0px #70aefe
+
+@mixin effect-style-shadow-book-call() 
+	box-shadow: 0px 96px 27px #70aefe, 0px 62px 25px #70aefe, 0px 35px 21px #70aefe, 0px 15px 15px #70aefe, 0px 4px 8px #70aefe, 0px 0px 0px #70aefe
+
+@mixin effect-style-shadow-book-call() 
+	box-shadow: 0px 96px 27px #70aefe, 0px 62px 25px #70aefe, 0px 35px 21px #70aefe, 0px 15px 15px #70aefe, 0px 4px 8px #70aefe, 0px 0px 0px #70aefe
+
+@mixin effect-style-shadow-dropdown-menu() 
+	box-shadow: 0px 0px 6px #5393e2, 0px 0px 5px #5393e2, 0px 0px 5px #5393e2, 0px 0px 3px #5393e2, 0px 0px 2px #5393e2, 0px 0px 0px #5393e2
+
+@mixin effect-style-shadow-dropdown-menu() 
+	box-shadow: 0px 0px 6px #5393e2, 0px 0px 5px #5393e2, 0px 0px 5px #5393e2, 0px 0px 3px #5393e2, 0px 0px 2px #5393e2, 0px 0px 0px #5393e2
+
+@mixin effect-style-shadow-dropdown-menu() 
+	box-shadow: 0px 0px 6px #5393e2, 0px 0px 5px #5393e2, 0px 0px 5px #5393e2, 0px 0px 3px #5393e2, 0px 0px 2px #5393e2, 0px 0px 0px #5393e2
+
+@mixin effect-style-shadow-dropdown-menu() 
+	box-shadow: 0px 0px 6px #5393e2, 0px 0px 5px #5393e2, 0px 0px 5px #5393e2, 0px 0px 3px #5393e2, 0px 0px 2px #5393e2, 0px 0px 0px #5393e2
+
+@mixin effect-style-shadow-dropdown-menu() 
+	box-shadow: 0px 0px 6px #5393e2, 0px 0px 5px #5393e2, 0px 0px 5px #5393e2, 0px 0px 3px #5393e2, 0px 0px 2px #5393e2, 0px 0px 0px #5393e2
+
+@mixin effect-style-shadow-dropdown-menu() 
+	box-shadow: 0px 0px 6px #5393e2, 0px 0px 5px #5393e2, 0px 0px 5px #5393e2, 0px 0px 3px #5393e2, 0px 0px 2px #5393e2, 0px 0px 0px #5393e2
+
+@mixin effect-style-shadow-card-pipeline() 
+	box-shadow: 0px 0px 4px #70aefe, 0px 0px 4px #70aefe, 0px 0px 3px #70aefe, 0px 0px 2px #70aefe, 0px 0px 1px #70aefe, 0px 0px 0px #70aefe
+
+@mixin effect-style-shadow-card-pipeline() 
+	box-shadow: 0px 0px 4px #70aefe, 0px 0px 4px #70aefe, 0px 0px 3px #70aefe, 0px 0px 2px #70aefe, 0px 0px 1px #70aefe, 0px 0px 0px #70aefe
+
+@mixin effect-style-shadow-card-pipeline() 
+	box-shadow: 0px 0px 4px #70aefe, 0px 0px 4px #70aefe, 0px 0px 3px #70aefe, 0px 0px 2px #70aefe, 0px 0px 1px #70aefe, 0px 0px 0px #70aefe
+
+@mixin effect-style-shadow-card-pipeline() 
+	box-shadow: 0px 0px 4px #70aefe, 0px 0px 4px #70aefe, 0px 0px 3px #70aefe, 0px 0px 2px #70aefe, 0px 0px 1px #70aefe, 0px 0px 0px #70aefe
+
+@mixin effect-style-shadow-card-pipeline() 
+	box-shadow: 0px 0px 4px #70aefe, 0px 0px 4px #70aefe, 0px 0px 3px #70aefe, 0px 0px 2px #70aefe, 0px 0px 1px #70aefe, 0px 0px 0px #70aefe
+
+@mixin effect-style-shadow-card-pipeline() 
+	box-shadow: 0px 0px 4px #70aefe, 0px 0px 4px #70aefe, 0px 0px 3px #70aefe, 0px 0px 2px #70aefe, 0px 0px 1px #70aefe, 0px 0px 0px #70aefe
+
+@mixin effect-style-pink() 
+	box-shadow: 0px 36px 10px #c894ff, 0px 23px 9px #c894ff, 0px 13px 8px #c894ff, 0px 6px 6px #c894ff, 0px 1px 3px #c894ff, 0px 0px 0px #c894ff
+
+@mixin effect-style-pink() 
+	box-shadow: 0px 36px 10px #c894ff, 0px 23px 9px #c894ff, 0px 13px 8px #c894ff, 0px 6px 6px #c894ff, 0px 1px 3px #c894ff, 0px 0px 0px #c894ff
+
+@mixin effect-style-pink() 
+	box-shadow: 0px 36px 10px #c894ff, 0px 23px 9px #c894ff, 0px 13px 8px #c894ff, 0px 6px 6px #c894ff, 0px 1px 3px #c894ff, 0px 0px 0px #c894ff
+
+@mixin effect-style-pink() 
+	box-shadow: 0px 36px 10px #c894ff, 0px 23px 9px #c894ff, 0px 13px 8px #c894ff, 0px 6px 6px #c894ff, 0px 1px 3px #c894ff, 0px 0px 0px #c894ff
+
+@mixin effect-style-pink() 
+	box-shadow: 0px 36px 10px #c894ff, 0px 23px 9px #c894ff, 0px 13px 8px #c894ff, 0px 6px 6px #c894ff, 0px 1px 3px #c894ff, 0px 0px 0px #c894ff
+
+@mixin effect-style-pink() 
+	box-shadow: 0px 36px 10px #c894ff, 0px 23px 9px #c894ff, 0px 13px 8px #c894ff, 0px 6px 6px #c894ff, 0px 1px 3px #c894ff, 0px 0px 0px #c894ff
+
+@mixin effect-style-new() 
+	box-shadow: 0px 0px 6px #cebdff, 0px 0px 5px #cebdff, 0px 0px 5px #cebdff, 0px 0px 3px #cebdff, 0px 0px 2px #cebdff, 0px 0px 0px #cebdff
+
+@mixin effect-style-new() 
+	box-shadow: 0px 0px 6px #cebdff, 0px 0px 5px #cebdff, 0px 0px 5px #cebdff, 0px 0px 3px #cebdff, 0px 0px 2px #cebdff, 0px 0px 0px #cebdff
+
+@mixin effect-style-new() 
+	box-shadow: 0px 0px 6px #cebdff, 0px 0px 5px #cebdff, 0px 0px 5px #cebdff, 0px 0px 3px #cebdff, 0px 0px 2px #cebdff, 0px 0px 0px #cebdff
+
+@mixin effect-style-new() 
+	box-shadow: 0px 0px 6px #cebdff, 0px 0px 5px #cebdff, 0px 0px 5px #cebdff, 0px 0px 3px #cebdff, 0px 0px 2px #cebdff, 0px 0px 0px #cebdff
+
+@mixin effect-style-new() 
+	box-shadow: 0px 0px 6px #cebdff, 0px 0px 5px #cebdff, 0px 0px 5px #cebdff, 0px 0px 3px #cebdff, 0px 0px 2px #cebdff, 0px 0px 0px #cebdff
+
+@mixin effect-style-new() 
+	box-shadow: 0px 0px 6px #cebdff, 0px 0px 5px #cebdff, 0px 0px 5px #cebdff, 0px 0px 3px #cebdff, 0px 0px 2px #cebdff, 0px 0px 0px #cebdff
