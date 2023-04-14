@@ -5,13 +5,13 @@ import Content from './components/content';
 // import './components/styles/sidebar.sass'
 import logo from '../src/assets/stpLogo.svg';
 import './index.sass'
+
 function App() {
   return (
     <div className="App">
       <img src={logo} alt='' className='logo'/>
       <Head />
       <div className='main'>
-
         <Sidebar/>
         <div className='content'>
           <Content/>
