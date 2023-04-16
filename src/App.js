@@ -2,7 +2,6 @@ import React from 'react';
 import Head from './components/navbar';
 import Sidebar from './components/sidebar';
 import Content from './components/content';
-// import './components/styles/sidebar.sass'
 import logo from '../src/assets/stpLogo.svg';
 import './index.sass'
 

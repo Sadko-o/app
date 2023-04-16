@@ -1,6 +1,6 @@
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
-import ProfileForm from './profileForm'
+import Profile from './profilePage'
 
   
 const content = () => {
@@ -8,7 +8,8 @@ const content = () => {
     <div>
         <Routes>
             <Route path="/dashboard" element={
-                <ProfileForm/>}/>
+                <Profile/>
+                }/>
             <Route path="/profile" element={<div>Profile</div>}/>
             <Route path="/recommendations" element={<div>Recommendations</div>}/>
             <Route path="/catalog" element={<div>Catalog</div>}/>

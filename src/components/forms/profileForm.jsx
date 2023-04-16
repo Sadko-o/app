@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles/profileForm.sass'
+import '../styles/profileForm.sass'
 import { useDispatch, useSelector } from 'react-redux';
 import { setName, setSurname } from '../../redux/slices/profileSlice'
 

@@ -1,19 +1,26 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Formik, Form, Field } from 'formik';
-import classes from './Activities.module.css';
-import { addActivity } from '../../../../../redux/slices/ProfileInfo/addActivitySlice';
+import '../styles/activityForm.sass';
+import '../styles/profileForm.sass'
+import { addActivity } from '../../redux/slices/activitySlice';
 
-export const Activities = () => {
+
+export const ActivityForm = () => {
+
     const dispatch = useDispatch();
+    
+    
     const handleSubmit = (values, { resetForm }) => {
         console.log(values);
         dispatch(addActivity(values));
         resetForm();
+        alert("ADDED Activity" + JSON.stringify(values, null, 2));
     };
+    
     return (
-        <div className={classes.activities}>
-            <h2 className={classes.header}>Activities</h2>
+        <div className="activities">
+            <h2 className="title">Activities</h2>
             <Formik
                 initialValues={{
                     activityType: '',
@@ -21,17 +28,17 @@ export const Activities = () => {
                     activityName: '',
                     description: '',
                 }}
-                onSubmit={handleSubmit}
-            >
+                onSubmit={handleSubmit}>
+
                 {({ values, handleChange }) => (
                     <Form>
-                        <div className={classes.form}>
-                            <div className={classes.line}>
-                                <p className={classes.title}>Activity type</p>
-                                <div className={classes.labels}>
-                                    <label className={classes.label}>
+                        <div className="form">
+                            <div className="section">
+                                <p className="title">Activity type</p>
+                                <div className="labels">
+                                    <label className="label">
                                         <Field
-                                            className={classes.radioButton}
+                                            className="radioButton"
                                             type="radio"
                                             name="activityType"
                                             value="extracurriculars"
@@ -40,9 +47,9 @@ export const Activities = () => {
                                         />
                                         Extracurriculars
                                     </label>
-                                    <label className={classes.label}>
+                                    <label className="label">
                                         <Field
-                                            className={classes.radioButton}
+                                            className="radioButton"
                                             type="radio"
                                             name="activityType"
                                             value="honors"
@@ -54,47 +61,56 @@ export const Activities = () => {
                                 </div>
                             </div>
 
-                            <div className={classes.line}>
-                                <label className={classes.title} htmlFor="tier-select">Tier</label>
+                            <div className="section">
+                                <label className="title" htmlFor="tier-select">Tier</label>
                                 <Field
-                                    className={classes.tierLine}
+                                    className="tierLine"
                                     as="select"
                                     id="tier-select"
                                     name="tier"
                                     value={values.tier}
                                     onChange={handleChange}
                                 >
-                                    <option className={classes.tierOption} value="exceptional">1 — Exceptional</option>
+                                    <option className="tierOption" value="1">1 — Exceptional</option>
+                                    <option className="tierOption" value="2">2 — Excellent</option>
+                                    <option className="tierOption" value="3">3 — Good</option>
+                                    <option className="tierOption" value="4">4 — Average</option>
+                                    <option className="tierOption" value="5">5 — Below Average</option>
                                 </Field>
                             </div>
 
-                            <div className={classes.line}>
-                                <label className={classes.title} htmlFor="activity-name-input">Activity name</label>
+                            <div className="section">
+                                <label className="title" htmlFor="activity-name-input">Activity name</label>
                                 <Field
-                                    className={classes.activityInput}
+                                    className="activityInput"
                                     id="activity-name-input"
                                     name="activityName"
                                     placeholder="Enter a name of activity"
                                 />
                             </div>
 
-                            <div className={classes.line}>
-                                <label className={classes.title} htmlFor="description-input">Description</label>
+                            <div className="section">
+                                <label className="title" htmlFor="description-input">Description</label>
                                 <Field
-                                    className={classes.descriptionInput}
+                                    className="descriptionInput"
                                     id="description-input"
                                     name="description"
                                     placeholder="Enter a description of activity"
                                 />
                             </div>
 
-                            <div className={classes.button}>
-                                <button type="submit"><p className={classes.buttonText}>+ Add Activity</p></button>
-                            </div>
+                            <div className="button">
+                                <button type="submit">
+                                        <p className="buttonText">+ Add Activity</p> 
+                                </button>
+                             </div>
                         </div>
                     </Form>
                 )}
             </Formik>
         </div>
     );
-};
+}
+
+export default ActivityForm;
+                            

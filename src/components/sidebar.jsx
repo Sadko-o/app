@@ -1,87 +1,61 @@
-import React from 'react'
-import './styles/sidebar.sass'
-//icons
-// import logo from '../logo.svg'
-// import Content from './content';
-// import Head from './navbar';
-import {ReactComponent as Dashboard} from '.././assets/ChartBar.svg'
-import {ReactComponent as Profile} from '.././assets/User.svg'
-import {ReactComponent as Recommendatinos} from '.././assets/Puzzle.svg'
-import {ReactComponent as Catalog} from '.././assets/MagnifyingGlass.svg'
-import {ReactComponent as Saved} from '.././assets/Bookmark.svg'
-import {ReactComponent as Applications} from '.././assets/PaperClip.svg'
-import {ReactComponent as Learning} from '.././assets/Chart.svg'
+import React, { useState } from 'react';
+import './styles/sidebar.sass';
+import { ReactComponent as Dashboard } from '.././assets/ChartBar.svg';
+import { ReactComponent as Profile } from '.././assets/User.svg';
+import { ReactComponent as Recommendations } from '.././assets/Puzzle.svg';
+import { ReactComponent as Catalog } from '.././assets/MagnifyingGlass.svg';
+import { ReactComponent as Saved } from '.././assets/Bookmark.svg';
+import { ReactComponent as Applications } from '.././assets/PaperClip.svg';
+import { ReactComponent as Learning } from '.././assets/Chart.svg';
+import { Link } from 'react-router-dom';
 
 
 const Sidebar = () => {
+  const [activeItem, setActiveItem] = useState('');
+
+  const handleClick = (item) => {
+    setActiveItem(item);
+  };
+
   return (
-<>
-    {/* <div className='main'> */}
-    {/* <Head /> */}
-    <div className="container">
-      
-      <ul className="sidebar">
+    <>
+      <div className="container">
+        <ul className="sidebar">
+          {[
+            { href: '/dashboard', icon: Dashboard, label: 'Dashboard' },
+            { href: '/profile', icon: Profile, label: 'Profile' },
+            { href: '/recommendations', icon: Recommendations, label: 'Recommendations' },
+            { href: '/catalog', icon: Catalog, label: 'Catalog' },
+            { href: '/saved', icon: Saved, label: 'Saved' },
+            { href: '/applications', icon: Applications, label: 'Applications' },
+            { divider: true },
+            { href: '/learning', icon: Learning, label: 'Learning Platform' },
+          ].map((item, index) => (
+            <React.Fragment key={index}>
+              {item.divider ? (
+                <hr />
+              ) : (
+                <li
+                  onClick={() => handleClick(item.href)}
+                  className={activeItem === item.href ? 'active' : ''}
+                >
 
-        {/* <img src={logo} alt='' className='logo'/> */}
-        <li>    
-          <Dashboard className="img"/>
-          <div className="title">
-            <a  href='/dashboard' className="text">Dashboard</a>
-          </div>
-        </li>
+                <Link to={item.href}>
+                  <item.icon className="img" />
+                  <div className="title">
+                    <p className="text">{item.label}</p>
+                  </div>
+                </Link>
+                </li>
 
-        <li>
-          <Profile className="img"/>
-          <div className="title">
-          <a href='/profile' className="text">Profile</a>
-          </div>
-        </li>
+                
+              )}
+            </React.Fragment>
+          ))}
+        </ul>
+      </div>
+    </>
+  );
+};
 
-        <li>
-          <Recommendatinos className="img"/>
-          <div className="title">
-              <a href='/recommendations' className="text">Recommendations</a>
-          </div>
-        </li>
-
-        <li>
-          <Catalog className="img"/>
-          <div className="title">
-              <a href='/catalog' className="text">Catalog</a>
-          </div>
-        </li>
-
-        <li>
-          <Saved className="img"/>
-          <div className="title">
-              <a href='/saved' className="text">Saved</a>
-          </div>
-        </li>
-        
-        <li>
-          <Applications className="img"/>
-          <div className="title">
-              <a href='/applications' className="text">Applications</a>
-          </div>
-        </li>
-
-        <hr/>
-
-        <li>
-          <Learning className="img"/>
-          <div className="title">
-              <a href='/learning' className="text">Learning Platform</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-{/* 
-    <div className='content'>
-      <Content/>
-      </div> */}
-    {/* </div> */}
-</>
-  )
-}
-
-export default Sidebar
+export default Sidebar;

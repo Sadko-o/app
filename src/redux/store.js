@@ -1,18 +1,18 @@
 import { configureStore } from '@reduxjs/toolkit';
-// import addActivityReducer from './slices/ProfileInfo/addActivitySlice';
+import addActivityReducer from './slices/activitySlice'
 import genderReducer from './slices/genderSlice';
-// import countryOfResidenceReducer from './slices/ProfileInfo/demographics/countryOfResidenceSlice'
-// import cityOfResidenceReducer from './slices/ProfileInfo/demographics/cityOfResidenceSlice'
+import countryReducer from './slices/countrySlice'
+import cityReducer from './slices/citySlice'
 import profileReducer from './slices/profileSlice'
-// import languageReducer from './slices/Header/ToggleLanguage/ToggleLanguageSlice'
+import languageReducer from './slices/languageSlice'
 
 export const store = configureStore({
   reducer: {
-    // addActivity: addActivityReducer,
+    addActivity: addActivityReducer,
     gender: genderReducer,
-    // countryOfResidence: countryOfResidenceReducer,
-    // cityOfResidence: cityOfResidenceReducer,
+    country: countryReducer,
+    city: cityReducer,
     profile: profileReducer,
-    // language: languageReducer,
+    language: languageReducer,
   },
 });
