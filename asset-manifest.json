@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/app/static/css/main.c6592f4e.css",
+    "main.js": "/app/static/js/main.be3b3329.js",
+    "static/media/stpLogo.svg": "/app/static/media/stpLogo.b61e46de04ec8a6221d6471ddc2ebf3f.svg",
+    "static/media/ChartBar.svg": "/app/static/media/ChartBar.31763418649aaa99f231704ed6d7155b.svg",
+    "static/media/Puzzle.svg": "/app/static/media/Puzzle.e83b3c84d70befcf18051ef35ff4b884.svg",
+    "static/media/Chart.svg": "/app/static/media/Chart.3bb23e099e7ace126fb96d27d57d534f.svg",
+    "static/media/PaperClip.svg": "/app/static/media/PaperClip.e5d445fa3d6e51a805bdf4d76a74fe5d.svg",
+    "static/media/User.svg": "/app/static/media/User.fd2ee3b3ec58cc6989f969e09047e37e.svg",
+    "static/media/Bookmark.svg": "/app/static/media/Bookmark.d0e00c727e503a987236d867e2648ff9.svg",
+    "static/media/MagnifyingGlass.svg": "/app/static/media/MagnifyingGlass.58d931ebc1030db723c0ea2ab6ce1ec7.svg",
+    "index.html": "/app/index.html",
+    "static/media/switch.svg": "/app/static/media/switch.8c5e81e8195b64dd44fa.svg",
+    "main.c6592f4e.css.map": "/app/static/css/main.c6592f4e.css.map",
+    "main.be3b3329.js.map": "/app/static/js/main.be3b3329.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6592f4e.css",
+    "static/js/main.be3b3329.js"
+  ]
+}
