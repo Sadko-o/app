@@ -20,10 +20,10 @@ const ProfileForm = () => {
 
   return (
     <div className="profile">
-        <h2 className="title">Profile</h2>
+        <h2 className="form-header">Profile</h2>
         <form className="form">
             <div className="profileInput">
-                <label>Name</label>
+                <label className='form-title'>Name</label>
                 <input className="input"
                     id="nameID"
                     placeholder="First Name"
@@ -34,7 +34,7 @@ const ProfileForm = () => {
             </div>
 
             <div className="profileInput">
-                <label className="label">Surname</label>
+                <label className='form-title'>Surname</label>
                 <input className="input"
                     id="surnameID"
                     placeholder="Last Name"

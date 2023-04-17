@@ -1,8 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/gotham-pro')
-$divider-color: #D5E4F7
-$dark-blue-color: #06253C
-$white-color: #FFFFFF
-$hover-color: #4BA5EC
+@use './variables' as *
 
 
 .main
@@ -50,7 +46,7 @@ $hover-color: #4BA5EC
 
       &:hover
         background-color: $hover-color
-        .text
+        .sidebar-text
           color: $white-color
         .img 
           path 
@@ -61,7 +57,7 @@ $hover-color: #4BA5EC
         list-style: none
         text-decoration: none
 
-    .text
+    .sidebar-text
       font-family: 'Gotham Pro'
       font-style: medium
       font-weight: 400
@@ -92,13 +88,11 @@ $hover-color: #4BA5EC
 
 
 .active
-    height: 10px
-    width: 110px
-    border-radius: 12px
-    padding: 18px 70px 18px 10px
-    display: flex
-    align-items: center
-    background: #4BA5EC
-    color: #FFFFFF
-    text-decoration: none
+  background-color: $hover-color
+  font-family: 'Gotham Pro'
+  color: $white-color
+  .img 
+    path 
+      fill: $white-color
+  cursor: pointer
 

@@ -4,8 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import '../styles/dropdown.sass';
 import { fetchCities } from '../../redux/slices/citySlice';
 import { setCity } from '../../redux/slices/citySlice';
-// import { MenuItem, FormControl, InputLabel, Select } from '@material-ui/core';
-import { MenuItem, FormControl, InputLabel, Select } from '@mui/material';
+import { MenuItem, FormControl, InputLabel, Select } from '@material-ui/core';
+// import { MenuItem, FormControl, InputLabel, Select } from '@mui/material';
 
 
 const CityDropdown = ({ formikProps }) => {
@@ -28,12 +28,13 @@ const CityDropdown = ({ formikProps }) => {
 
 
   return (
+    <div className="input">
     <FormControl className="formControl">
-      <InputLabel className="title" shrink id="city-select-label">
+      <InputLabel className="dropdown-label" shrink id="city-select-label">
         City of Residence
       </InputLabel>
       <Field
-        className="dropDown"
+        className="dropdown-field"
         as={Select}
         name="city"
         id="city-select"
@@ -47,13 +48,14 @@ const CityDropdown = ({ formikProps }) => {
                 </MenuItem>
                 ) : (
             {cities.map((city) => (
-                <MenuItem key={city.id} value={city}>
+                <MenuItem key={city.id} value={city} className='menu-options'>
                     {city.name}
                 </MenuItem>
             ))}
         )
       </Field>
     </FormControl>
+    </div>
   );
 };
 

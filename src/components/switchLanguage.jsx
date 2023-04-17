@@ -14,16 +14,16 @@ export function SwitchLanguage() {
     return (
         <div className="switchLanguage">
             <button
-                className={`button ${activeButton === "Eng" ? "active" : ""}`}
+                className={`button ${activeButton === "Eng" ? "active" : "transparent"}`}
                 onClick={() => handleSwitch("Eng")}
             >
-                Eng
+                <p className="languages">Eng</p>
             </button>
             <button
-                className={`button ${activeButton === "Rus" ? "active" : ""}`}
+                className={`button ${activeButton === "Rus" ? "active" : "transparent"}`}
                 onClick={() => handleSwitch("Rus")}
             >
-                Rus
+                <p className="languages">Rus</p>
             </button>
         </div>
     );

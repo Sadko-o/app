@@ -8,8 +8,7 @@ import '../styles/demographyForm.sass'
 const demographyForm = () => {
   return (
     <div className='demographics'>
-      <h2 className="header">Demographics</h2>
-      
+      <h2 className="form-header">Demographics</h2>
       <Formik
                 initialValues={{
                     gender: '',

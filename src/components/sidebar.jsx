@@ -39,13 +39,12 @@ const Sidebar = () => {
                   onClick={() => handleClick(item.href)}
                   className={activeItem === item.href ? 'active' : ''}
                 >
-
-                <Link to={item.href}>
-                  <item.icon className="img" />
-                  <div className="title">
-                    <p className="text">{item.label}</p>
-                  </div>
-                </Link>
+                  <Link to={item.href}>
+                    <item.icon className="img" />
+                    <div className="title">
+                      <p className={activeItem === item.href ? 'active' : 'sidebar-text'}>{item.label}</p>
+                    </div>
+                  </Link>
                 </li>
 
                 
